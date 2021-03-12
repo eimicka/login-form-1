@@ -1,0 +1,124 @@
+/* Reserta os padrões do navegador */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Tamanho da aplicação(documento)*/
+html, body {
+    height: 100vh;
+}
+/* Estiliza o corpo(parte visível da página) do conteúdo*/
+body {
+    background-color: #7159c1;
+    font-family: sans-serif;
+}
+/* Configura a posição do formulário, neste caso, posição central */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Configura o embrulho do formulário "wrapper"*/
+form {
+    margin: 200px 0;
+    background: lavenderblush;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+/* Configura da posição dos campos de entrada de dados "email" e ""password*/
+form .input-block {
+    margin-bottom: 20px;
+}
+/* Configura os nomes referentes ao campos de entrada*/
+form .input-block label {
+    font-size: 14px;
+    color: darkslateblue;
+}
+/* Configura o campo de input(entrada de dados), tamanho, cor e afins*/
+form .input-block input {
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+    padding: 7px;
+    font-size: 16px;
+    color: #7159c1;
+    border-radius: 4px;
+    border: 1px solid #66CDAA;
+    outline-color: #7159c1;
+}
+/* Estila o botão de login */
+form .btn-login {
+    display: block;
+    min-width: 120px;
+    font-weight: 500;
+    border: none;
+    background-color: #7159c1;
+    color: white;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+    border-radius: 25px;
+    margin: auto;
+    padding: 7px;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+/* Configura o comportamento do botão ao receber o cursor de click*/
+form .btn-login:hover {
+    transform: scale(0.8);
+}
+/* Aparição do FORM na aplicação*/
+form {
+    overflow: hidden;
+}
+form .input-block:nth-child(1) {
+    animation: move 1s;
+    animation-delay: 0.25s;
+}
+
+form .input-block:nth-child(2) {
+    animation: move 1s;
+    animation-delay: 0.15s;
+    animation-fill-mode: backwards;
+}
+
+form .btn-login {
+    animation: move 1s;
+    animation-delay: 0.25s;
+    animation-fill-mode: backwards;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    } 
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translateX(-35%);
+    } 
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+/* Quando clicar no botão, sumir com o form*/
+
+.form-hide {
+    animation: down 1s;
+}
+@keyframes down {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
